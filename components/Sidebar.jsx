@@ -91,7 +91,7 @@ export default function Sidebar() {
           {menuItems.map(({ icon: Icon, ...menu }) => {
             const classes = getNavItemClasses(menu);
             return (
-              <div className={classes}>
+              <div key={"menu_" + menu.id} className={classes}>
                 <Link href={menu.link}>
                   <div className="flex items-center w-full h-full px-3 py-4">
                     <div style={{ width: "2.5rem" }}>
